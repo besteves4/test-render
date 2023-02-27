@@ -3,7 +3,7 @@ from rdflib import Graph, Namespace, URIRef, BNode, Literal
 from rdflib.namespace import RDF
 
 mondo = Graph()
-mondo.parse("dash/assets/test.owl", format='application/rdf+xml')
+mondo.parse("assets/test.owl", format='application/rdf+xml')
 
 g = Graph()
 restrictions = Graph()
@@ -660,7 +660,7 @@ def generate_policy(n_clicks):
     offer.remove((None, None, None))
     for triple in iter(g):
         offer.add(triple)
-    g.serialize(destination='dash/offer.ttl', format='turtle')
+    g.serialize(destination='offer.ttl', format='turtle')
     a = g.serialize(format='turtle')
     g.remove((None, None, None))
     restrictions.remove((None, None, None))
