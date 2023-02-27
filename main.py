@@ -33,6 +33,8 @@ offer.namespace_manager.bind('dpv', URIRef('https://w3id.org/dpv#'))
 ex = Namespace("https://example.com/")
 
 app = Dash(__name__)
+server = app.server
+
 app.layout = html.Div(
     className='wrapper',
     children=[
